@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PIP_NO_CACHE_DIR=1 \
     PYTHONUNBUFFERED=1 \
     LONGCAT_REPO=/opt/longcat \
-    LONGCAT_MODEL_ROOT=/runpod-volume/models
+    LONGCAT_MODEL_ROOT=/runpod-volume/longcat-models
 
 RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg gcc git libsndfile1 && \
     rm -rf /var/lib/apt/lists/*
