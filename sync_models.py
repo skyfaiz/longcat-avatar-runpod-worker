@@ -6,7 +6,7 @@ from pathlib import Path
 from huggingface_hub import snapshot_download
 
 
-root = Path(os.environ.get("LONGCAT_MODEL_ROOT", "/runpod-volume/models"))
+root = Path(os.environ.get("LONGCAT_MODEL_ROOT", "/runpod-volume/longcat-models"))
 root.mkdir(parents=True, exist_ok=True)
 
 snapshot_download(
