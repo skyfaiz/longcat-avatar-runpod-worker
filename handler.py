@@ -11,7 +11,7 @@ from pathlib import Path
 import runpod
 
 
-MODEL_ROOT = Path(os.environ.get("LONGCAT_MODEL_ROOT", "/runpod-volume/models"))
+MODEL_ROOT = Path(os.environ.get("LONGCAT_MODEL_ROOT", "/runpod-volume/longcat-models"))
 REPO = Path(os.environ.get("LONGCAT_REPO", "/opt/longcat"))
 MAX_INPUT_BYTES = 25 * 1024 * 1024
 
