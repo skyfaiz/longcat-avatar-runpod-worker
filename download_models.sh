@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # download_models.sh — download LongCat model snapshots into a network-mounted directory
 # Usage: ./download_models.sh /path/to/volume
-# If no path provided, defaults to /mnt/longcat-models
+# If no path provided, defaults to /runpod-volume/longcat-models
 set -euo pipefail
 
-TARGET=${1:-/mnt/longcat-models}
+TARGET=${1:-/runpod-volume/longcat-models}
 HF_TOKEN=${HUGGINGFACE_HUB_TOKEN:-}
 
 echo "Target model directory: $TARGET"
@@ -32,7 +32,7 @@ import os
 from pathlib import Path
 from huggingface_hub import snapshot_download
 
-target = Path(os.environ.get("TARGET_DIR", "/mnt/longcat-models"))
+target = Path(os.environ.get("TARGET_DIR", "/runpod-volume/longcat-models"))
 target.mkdir(parents=True, exist_ok=True)
 
 def snapshot(repo_id, local_subdir, **kwargs):
